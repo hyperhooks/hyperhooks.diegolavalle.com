@@ -1,0 +1,4 @@
+title = "Diego Lavalle - Shared Content"
+baseURL = "https://share.diegolavalle.com/"
+languageCode = "en-us"
+disableKinds =  ["home", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Diego Lavalle | Invoice #{{ .Params.number }}</title>
+    <meta name="description" content="Diego Lavalle - Invoice">
+    <link rel="stylesheet" href="/css/root.css" />
+    <style>
+h1 {
+  text-align: right;
+}
+
+body {
+  margin: 2rem auto;
+  padding: 0 25px;
+  max-width: 1180px;
+  display: grid;
+  grid-gap: 1rem 10px;
+  grid-template-columns: 200px auto;
+  grid-template-areas:
+    "....... header"
+    "sidebar content"
+    "footer  footer";
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+main {
+  grid-area: content;
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+}
+    </style>
+  </head>
+  <body>
+    <header><h1>Diego Lavalle • Invoice</h1><hr />{{dateFormat "2006-01-02" .Params.invoiceDate }}</header>
+    <aside>
+    <pre>
+Diego Lavalle Vazquez
+1417-77 Huntley St
+Toronto ON M4Y 2P3
+T +1 (647) 873-6812
+dev@diegolavalle.com
+    </pre>
+    </aside>
+    <main class="markdown-body">
+      
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Attention: Bruno Antunes
+Gaspard+Bruno LTD
+Unit 9B Queens Yard White Post Lane
+E95EN LONDON, UK
+Company Number: 9363056
+VAT Number: GB257596750
+</code></pre></div></div>
+
+<p><strong>Project:</strong> #{{ .Params.description }}</p>
+
+<p><strong>Project description:</strong></p>
+
+<p>Implementation of web and mobile application user interfaces (UI) and application programming interfaces (API). General information technology (IT) work.</p>
+
+<p><strong>Invoice #{{ .Params.number }}</strong></p>
+
+<p><strong>Terms:</strong> Due on invoice date</p>
+
+<p><em>Please use the following details for your wire transfers:</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IBAN: IE11 AIBK 9320 8647 7140 51 | SWIFT/BIC: AIBKIE2DXXX | Account Holder: Diego LAVALLE VAZQUEZ
+Address: AIB Bank - 7-12 Dame Street - Dublin - D02 KX20 Ireland
+</code></pre></div></div>
+<!--
+IBAN: DE64 7001 1110 6050 2761 37 | SWIFT/BIC: DEKTDE7GXXX | Account Holder: TW Diego Lavalle Vazquez
+Address: Deutsche Handelsbank - Südliche Münchner Str. 2 - Grünwald - 82031 Deutschland
+-->
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Application software development - 80 hours</td>
+      <td>EUR {{ lang.NumFmt 2 .Params.total }}</td>
+    </tr>
+    <tr>
+      <td><strong>Total</strong></td>
+      <td><strong>EUR {{ lang.NumFmt 2 .Params.total }}</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Thank you for your business. It is a pleasure to work with you all on your many projects.</p>
+
+<p>Sincerely yours,</p>
+
+<p>Diego Lavalle</p>
+
+
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>

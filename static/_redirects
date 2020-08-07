@@ -1,0 +1,6 @@
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+# Redirect "share" subdomain root to primary domain
+/ https://diegolavalle.com/
+
+# :splat 301!
