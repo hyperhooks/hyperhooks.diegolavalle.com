@@ -1,0 +1,3 @@
+{{ with .context.Site.GetPage "page" ( printf "%s.%s" ( cond (eq .context.File.ContentBaseName "_index") "home" .context.File.ContentBaseName ) .name) }}
+  {{ .Content }}
+{{ end }}

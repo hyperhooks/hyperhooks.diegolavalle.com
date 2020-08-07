@@ -1,0 +1,339 @@
+    /* https://coolors.co/3d5a80-98c1d9-e0fbfc-ee6c4d-293241 */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/roboto-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'),
+       url('/fonts/roboto-v20-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/roboto-v20-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold; /* 700 */
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+       url('/fonts/roboto-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/roboto-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-condensed-700 - latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: bold; /* 700 */
+  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'),
+       url('/fonts/roboto-condensed-v18-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/roboto-condensed-v18-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-condensed-regular - latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
+       url('/fonts/roboto-condensed-v18-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/roboto-condensed-v18-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  font-size: 18px;
+  line-height: 2em;
+  letter-spacing: .05em;
+  font-family: 'Roboto';
+  --lighter-color: #e0fbfc; /* light-cyan */
+  --light-color: #98c1d9; /* pale-cerulean */
+  --dark-color: #3d5a80; /* bdazzled-blue */
+  --darker-color: #293241; /* gunmetal */
+  --accent-color: #ee6c4d; /* burnt-sienna */
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, a:visited {
+  color: var(--accent-color);
+}
+
+.pagecontent {
+  min-width: 250px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  font-family: 'Roboto Condensed';
+  font-size: 1.3rem;
+  background-color: var(--darker-color);
+  padding: 2rem 25px 2rem 25px;
+  border-bottom: 1px var(--accent-color) solid;
+}
+
+.title {
+  font-weight: bold;
+  color: var(--darker-color);
+  padding: .5rem 15px .5rem 30px;
+  background-color: var(--accent-color);
+}
+
+.tagline {
+  color: var(--accent-color);
+  padding: .5rem 5px;
+}
+
+.apps {
+  background-color: var(--darker-color);
+}
+
+.apps .heading {
+  color: var(--darker-color);
+  background-color: var(--lighter-color);
+}
+
+.apps .content {
+  background-color: var(--darker-color);
+  color: var(--lighter-color);
+  display: flex;
+}
+
+.apps footer {
+  text-align: center;
+  color: var(--lighter-color);
+}
+
+.apps .content > * {
+  flex: 1;
+}
+
+.opensource {
+  padding: .5rem 25px;
+}
+
+.opensource .heading {
+  background-color: var(--light-color);
+  color: var(--darker-color);
+}
+
+.opensource .content {
+  background-color: var(--light-color);
+  display: flex;
+}
+
+.opensource .content > * {
+  flex: 1;
+}
+
+.block {
+  padding: 2rem 25px;
+  border-bottom: 1px var(--accent-color) solid;
+}
+
+.connect {
+  background-color: var(--darker-color);
+}
+
+.block .heading {
+  font-family: 'Roboto Condensed';
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: .5rem 25px;
+}
+
+.connect .heading {
+  color: var(--darker-color);
+  background-color: var(--lighter-color);
+}
+
+.block .content {
+  padding: 1rem 0 2rem 0;
+}
+
+.connect .content {
+  background-color: var(--darker-color);
+  color: var(--lighter-color);
+  display: flex;
+}
+
+.connect .content > .social {
+  text-align: right;
+}
+
+.connect .content > * {
+  flex: 1;
+}
+
+.aboutme {
+  padding: 1rem 0;
+  font-weight: bold;
+  text-align: center;
+  color: var(--darker-color);
+  border-bottom: 1px var(--accent-color) solid;
+}
+
+.aboutme a {
+  color: var(--accent-color);
+}
+
+.aboutme > div {
+  padding: 1rem 15px;
+}
+
+.aboutme > .block0 {
+  background: var(--lighter-color);
+}
+
+.aboutme > .block1 {
+}
+
+.aboutme > .block2 {
+}
+
+.aboutme > .block3 {
+  color: var(--lighter-color);
+  background: var(--dark-color);
+}
+
+.aboutme > .block4 {
+  color: var(--darker-color);
+  background: var(--light-color);
+}
+
+.aboutme > .collage {
+  width: 100%;
+}
+
+.swiftyoui {
+  padding: 1rem 0;
+  font-weight: bold;
+  text-align: center;
+  color: var(--lighter-color);
+  background-color: var(--accent-color);
+  border-bottom: 1px var(--accent-color) solid;
+}
+
+.swiftyoui a {
+  color: var(--darker-color);
+}
+
+.app-card {
+  margin: 1rem 10px;
+}
+
+.app-card .name {
+  font-family: 'Roboto Condensed';
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+}
+
+.app-card .description {
+  padding: .5rem 5px;
+}
+
+.app-card:not(.highlight) .description {
+  color: var(--lighter-color);
+}
+
+.app-card.highlight .description {
+  background: var(--lighter-color);
+  color: var(--darker-color);
+}
+
+.app-card .button {
+  text-align: left;
+  margin: 1rem 0 .5rem 0;
+  font-family: 'Roboto Condensed';
+  font-weight: bold;
+}
+
+.app-card .button > a {
+  padding: .5rem 10px;
+  background: var(--accent-color);
+  color: var(--lighter-color);
+}
+
+.project-card {
+  margin: 0rem 25px;
+}
+
+.project-card .name {
+  font-family: 'Roboto Condensed';
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--lighter-color);
+  background: var(--darker-color);
+  text-align: center;
+}
+
+.project-card .description {
+  padding: .5rem 25px;
+  border: 1px var(--accent-color) solid;
+}
+
+.project-card:not(.highlight) .description {
+  background: var(--lighter-color);
+  color: var(--darker-color);
+}
+
+.project-card.highlight .description {
+  background: var(--lighter-color);
+  color: var(--darker-color);
+}
+
+.project-card .button {
+  text-align: left;
+  margin: 1rem 0 .5rem 0;
+  font-family: 'Roboto Condensed';
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+footer {
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .apps .content {
+    flex-flow: column nowrap;
+  }
+
+  .opensource .content {
+    flex-flow: column nowrap;
+  }
+
+  .opensource .content > * {
+    margin: 0.5rem 20px;
+  }
+
+  .connect .content {
+    flex-flow: column nowrap;
+  }
+
+  .connect .content > * {
+    text-align: center;
+  }
+
+  .connect .content > .social {
+    text-align: center;
+  }
+}
+

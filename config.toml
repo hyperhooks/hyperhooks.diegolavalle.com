@@ -1,0 +1,4 @@
+baseURL = "https://diegolavalle.com/"
+languageCode = "en-us"
+title = "Diego Lavalle"
+disableKinds =  ["taxonomy", "taxonomyTerm"]

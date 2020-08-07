@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head" . }}
+  <body>
+    <div class="pagecontent">
+      <a href="/">
+      {{ partial "header" . }}
+      </a>
+      <div class="aboutme">
+
+{{ .Content }}
+
+      </div>
+      {{ partial "footer" . }}
+    </div>
+  </body>
+</html>
