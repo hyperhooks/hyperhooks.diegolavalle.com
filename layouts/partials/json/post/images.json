@@ -1,0 +1,13 @@
+[{{ range $i, $resource := .Resources.ByType "image" }}
+{{ if not (eq $i 0) }},{{ end }}
+{{ with $resource }}
+{
+  "name": {{ .Name | jsonify }},
+  "permalink": {{ .Permalink | jsonify }},
+  {{ with imageConfig (printf "%s%s" "content/" .RelPermalink ) }}
+  "width": {{ .Width | jsonify }},
+  "height": {{ .Height | jsonify }}
+  {{ end }}
+}
+{{ end }}
+{{ end }}]

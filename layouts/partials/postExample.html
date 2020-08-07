@@ -1,0 +1,20 @@
+{{ if .Params.Example }}
+{{ with .GetPage .Params.Example }}
+  <div style="padding: 1rem 15px; background-color: lightgray;">
+    <div style="text-align: right;">
+      <em>FEATURED EXAMPLE</em>
+    </div>
+    <div style="text-align: center;">
+      <a href="{{ .RelPermalink }}">
+        <div>
+          {{ with .Page.Resources.GetMatch "icon" }}
+          <img src="{{.RelPermalink}}" />
+          {{ end }}
+        </div>
+        <div>{{ .Title }}<div>
+      </a>
+      <div>{{ .Params.Subtitle }}<div>
+    </div>
+  </div>
+{{ end }}
+{{ end }}

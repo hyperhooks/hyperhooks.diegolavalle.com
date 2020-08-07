@@ -1,0 +1,4 @@
+# [context.branch-deploy.environment]
+# The default version you use for production if you don't use context
+[build.environment]
+  HUGO_VERSION = "0.74.3"

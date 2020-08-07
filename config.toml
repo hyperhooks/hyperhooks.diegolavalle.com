@@ -1,0 +1,29 @@
+title = "Swift You and I"
+baseURL = "https://swiftui.diegolavalle.com/"
+languageCode = "en-us"
+disableKinds = ["RSS"]
+enableInlineShortcodes = true
+
+[taxonomies]
+tag = "tags"
+
+[outputs]
+section = ["HTML", "JSON"]
+page = ["HTML", "JSON"]
+taxonomyTerm = ["HTML", "JSON"]
+
+[params]
+  subtitle = "by Diego Lavalle"
+  appLink = "https://apps.apple.com/ca/app/u-i-working-examples-swiftui/id1500566574"
+
+[markup]
+[markup.highlight]
+  codeFences = false
+  guessSyntax = true
+  hl_Lines = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true
+  style = "tango"
+  tabWidth = 2

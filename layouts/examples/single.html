@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta name="description" content="{{ .Summary }}">
+    <link rel="stylesheet" type="text/css" href="{{ relURL `css/root.css` }}" />
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+  </head>
+  <body>
+    <style>
+    .example {
+      margin: 2rem 0 0rem 0;
+    }
+    .example .title {
+      font-size: 2.5rem;
+    }
+    .example .tagline {
+      font-size: 2.5rem;
+      font-style: italic;
+    }
+    .example .cover {
+      text-align: center;
+    }
+    </style>
+    {{ partial "header" . }}
+    <main class="example">
+    <p>
+      <span class="title">{{ .Title }}: </span> <span class="tagline">{{ .Params.Subtitle }}</span>
+    </p>
+    <a href="https://github.com/swift-you-and-i/working-examples/tree/master/Sources/WorkingExamples/{{ path.Base .Permalink }}">Source code</a> | <a href="{{ .Site.Params.AppLink }}">Run it in the app</a>
+    <div>
+    {{ .Content }}
+    </div>
+    <hr />
+    {{ with .Page.Resources.GetMatch "screenshot" }}
+    <div class="cover">
+      <img src="{{.RelPermalink}}" />
+    </div>
+    {{ end }}
+    </main>
+    {{ partial "footer" . }}
+  </body>
+</html>

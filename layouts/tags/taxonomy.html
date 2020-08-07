@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+  <p>
+    <a href="../">All tags</a>
+  </p>
+
+  {{ range  .Pages }}
+    {{ partial "summary.html" . }}
+  {{ end }}
+{{ end }}

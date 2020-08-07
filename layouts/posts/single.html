@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta name="description" content="{{ .Summary }}">
+    <link rel="stylesheet" type="text/css" href="{{ relURL `css/root.css` }}" />
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+  </head>
+  <body>
+    <style>
+    .post .title {
+      font-size: 2.5rem;
+      margin: 2.5rem 0 .5rem 0;
+    }
+    .post header {
+      margin-bottom: 2rem;
+    }
+    .post .date {
+      margin-left: 10px;
+      font-size: .85rem;
+      color: gray;
+    }
+    .post .author {
+      color: black;
+    }
+    
+    .post .cover {
+      text-align: center;
+      max-width: 100%;
+    }
+    </style>
+    {{ partial "header" . }}
+    <article class="post">
+      <header>
+        <div class="title">{{ .Title }}</div>
+        <div class="info">
+          <a class="author" href="https://twitter.com/{{ .Params.Twitter }}">@{{ .Params.Twitter }}</a><span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+          <div>
+              {{ range (.GetTerms "tags") }}
+                  <a href="{{ .Permalink }}">{{ .LinkTitle }}</a> 
+             {{ end }}
+          </div>
+        </div>
+      </header>
+      <main>
+        {{ with .Page.Resources.GetMatch "cover" }}
+        <img class="cover" src="{{.RelPermalink}}" />
+        {{ end }}
+        {{ .Content }}
+        {{ partial "postExample" . }}
+      </main>
+    </article>
+    {{ partial "footer" . }}
+  </body>
+</html>

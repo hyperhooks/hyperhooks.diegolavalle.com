@@ -1,0 +1,22 @@
+<style>
+.postSummary .postTitle {
+  font-size: 2rem;
+  line-height: 1rem;
+  color: black;
+}
+
+.postSummary {
+  margin: 2rem 0px;
+}
+</style>
+<article class="postSummary">
+  <div class="postHeader"><a class="postTitle" href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+  <main>
+    {{ .Summary }}
+  </main>
+  {{ if .Truncated }}
+  <footer>
+    <a href="{{ .RelPermalink }}">Read More…</a>
+  </footer>
+  {{ end }}
+</article>

@@ -1,0 +1,27 @@
+<style>
+.featured {
+}
+</style>
+<section class="featured">
+  {{ range first 1 ( where (where site.RegularPages ".Section" "posts" ) ".Params.featured" "==" true ) }}
+
+  <article class="postSummary">
+    <div class="postHeader"><a class="postTitle" href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+    {{ with .Page.Resources.GetMatch "feature" }}
+    <img class="cover" src="{{.RelPermalink}}" />
+    {{ end }}
+
+    <main>
+      {{ .Summary }}
+    </main>
+    {{ if .Truncated }}
+    <footer>
+      <a href="{{ .RelPermalink }}">Read More…</a>
+    </footer>
+    {{ end }}
+  </article>
+
+
+
+  {{ end }}
+</section>

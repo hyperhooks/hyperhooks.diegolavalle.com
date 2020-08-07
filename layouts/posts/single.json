@@ -1,0 +1,4 @@
+{
+  {{ partial "json/post.json" . }},
+  "content": {{ .Content | jsonify }}
+}

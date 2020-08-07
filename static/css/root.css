@@ -1,0 +1,24 @@
+@import url("colors.css");
+
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 2.5%;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 2rem;
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-links);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--color-links);
+}
+
+.highlight > pre {
+  padding: 1.5rem 10px;
+}

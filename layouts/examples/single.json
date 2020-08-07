@@ -1,0 +1,5 @@
+{
+  {{ partial "json/example.json" . }},
+  "plainContent": {{ .Content | plainify | jsonify }},
+  "content": {{ .Content | jsonify }}
+}

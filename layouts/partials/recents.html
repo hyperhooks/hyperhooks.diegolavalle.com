@@ -1,0 +1,14 @@
+<style>
+.recents header {
+  margin: 2.5rem 0 2rem 0;
+}
+.recents .title {
+  font-size: 2.5rem;
+}
+</style>
+<div class="recents">
+  <header><span class="title">Recent posts</span> <a href="/posts/">see all</a></header>
+  {{ range first 10 (where site.RegularPages ".Section" "posts") }}
+    {{ partial "summary" . }}
+  {{ end }}
+</div>

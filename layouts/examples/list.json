@@ -1,0 +1,6 @@
+[{{ range $i, $page := .Pages }}
+  {{ if not (eq $i 0) }},{{ end }}
+  {
+    {{ partial "json/example.json" . }}
+  }
+{{ end }}]

@@ -1,0 +1,38 @@
+<style>
+.siteHeader a {
+  color: inherit;
+}
+
+.siteHeader .logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.siteHeader .logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.siteHeader .title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.2rem;
+}
+
+.siteHeader .subtitle {
+  font-style: italic;
+  color: #555555;
+}
+</style>
+<header class="siteHeader">
+  <a href="/" title="{{ .Site.Title }}">
+    <div class="logoContainer">
+      <img class="logo" src="{{ relURL `images/logo.png` }}" />
+      <div class="titleContainer">
+        <div class="title">{{ .Site.Title }}</div>
+        <div class="subtitle">{{ .Site.Params.Subtitle }}</div>
+      </div>
+    </div>
+  </a>
+</header>

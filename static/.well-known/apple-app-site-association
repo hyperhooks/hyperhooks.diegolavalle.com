@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+       {
+         "appIDs": [ "92XVGR6M56.com.diegolavalle.swiftui.app" ],
+         "components": [
+           {
+              "/": "/posts/*",
+              "comment": "Matches any URL whose path starts with /posts/"
+           },
+           {
+              "/": "/examples/*",
+              "comment": "Matches any URL whose path starts with /examples/"
+           }
+         ]
+       }
+     ]
+   }
+}

@@ -1,0 +1,7 @@
+[{{ range $i, $page := .Data.Terms.Alphabetical }}
+  {{ if not (eq $i 0) }},{{ end }}
+  {
+  "title": {{ .Page.Title | jsonify }},
+  "count": {{ .Count | jsonify }}
+  }
+{{ end }}]
