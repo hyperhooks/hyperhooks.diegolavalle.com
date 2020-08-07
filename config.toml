@@ -1,0 +1,4 @@
+baseURL = "https://hyperhooks.diegolavalle.com/"
+languageCode = "en-us"
+title = "Hyperhooks"
+disableKinds =  ["taxonomy", "taxonomyTerm"]

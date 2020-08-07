@@ -1,0 +1,47 @@
+:root {
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 2em;
+  letter-spacing: .05em;
+  --accent-color: #ee6c4d; /* burnt-sienna */
+}
+
+body {
+  margin: 1rem 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, a:visited {
+  color: var(--accent-color);
+}
+
+.content {
+  min-width: 250px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+footer {
+  text-align: right;
+  font-weight: bold;
+}
+
+header .title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5em;
+  letter-spacing: .15em;
+}
+
+header .subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: .02em;
+}
