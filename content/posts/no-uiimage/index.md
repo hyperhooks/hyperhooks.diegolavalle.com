@@ -1,5 +1,6 @@
 +++
 title = "You Don't Need UIImage"
+subtitle = "Correct usage of the Image view"
 date = 2019-09-07T12:00:00Z
 twitter = "diegolavalledev"
 tags = ["swiftui", "swift", "ui", "ios", "apple"]

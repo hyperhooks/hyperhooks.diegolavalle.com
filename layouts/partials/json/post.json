@@ -1,4 +1,5 @@
 "title": {{ .Title | jsonify }},
+"subtitle": {{ .Params.Subtitle | jsonify }},
 "slug": {{ path.Base .Permalink | jsonify }},
 "permalink": {{ .Permalink | jsonify }},
 "relPermalink": {{ .RelPermalink | jsonify }},

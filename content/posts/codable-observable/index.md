@@ -1,5 +1,6 @@
 +++
 title = "Codable observable objects"
+subtitle = "Integrate your models with Combine"
 date = 2020-01-05T12:00:00Z
 twitter = "diegolavalledev"
 tags = ["combine", "observable", "encode", "decode", "json"]

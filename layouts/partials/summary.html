@@ -5,12 +5,20 @@
   color: black;
 }
 
+.postSummary .postSubtitle {
+  font-size: 1.2rem;
+  line-height: 0.5rem;
+  color: #666;
+  font-style: italic;
+}
+
 .postSummary {
   margin: 2rem 0px;
 }
 </style>
 <article class="postSummary">
   <div class="postHeader"><a class="postTitle" href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+  <div class="postHeader"><a class="postSubtitle" href="{{ .RelPermalink }}">{{ .Params.Subtitle }}</a></div>
   <main>
     {{ .Summary }}
   </main>

@@ -1,5 +1,6 @@
 +++
 title = "On-demand bindings"
+subtitle = "Create custom bindings when you need them"
 date = 2020-01-19T12:00:00Z
 twitter = "diegolavalledev"
 tags = ["binding", "state", "toggle", "swiftui", "array"]

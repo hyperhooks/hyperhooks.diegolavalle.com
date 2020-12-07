@@ -1,5 +1,6 @@
 +++
 title = "Keyboard-aware views"
+subtitle = "Learn how to make room for the software keyboard"
 date = 2020-01-12T12:00:00Z
 twitter = "diegolavalledev"
 tags = ["keyboard-aware", "software-keyboard", "form", "text-field", "combine"]

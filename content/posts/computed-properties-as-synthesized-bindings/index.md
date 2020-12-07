@@ -1,5 +1,6 @@
 +++
 title = "Computed properties as synthesized bindings"
+subtitle = "Gain control over your bindings' behavior"
 date = 2020-08-06T12:00:00Z
 twitter = "diegolavalledev"
 tags = ["ios", "swift", "swifui", "combine", "ui"]
