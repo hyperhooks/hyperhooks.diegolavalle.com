@@ -3,6 +3,10 @@ title = "That's a Wrap!"
 subtitle = "Horizontal line-wrapping stack"
 date = 2020-09-04T12:00:00Z
 
+aliases = [
+    "/latest"
+]
+
 [[resources]]
   name = "icon"
   src = "icon.png"
