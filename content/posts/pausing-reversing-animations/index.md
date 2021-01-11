@@ -3,7 +3,7 @@ title = "Pausing and Reversing SwiftUI Animations"
 subtitle = "Use regular views to control the flow"
 date = 2020-08-12T12:00:00Z
 twitter = "diegolavalledev"
-tags = ["ios", "swift", "swifui", "combine", "ui"]
+tags = ["animation", "interaction"]
 featured = false
 example = "/examples/count-down-up"
 

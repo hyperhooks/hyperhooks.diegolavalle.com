@@ -3,7 +3,7 @@ title = "Detecting When an Animation Has Ended"
 subtitle = "Perform actions on completion"
 date = 2019-09-21T12:00:00Z
 twitter = "diegolavalledev"
-tags = ["swiftui", "animation"]
+tags = ["animation"]
 featured = true
 example = "/examples/moonshot"
 

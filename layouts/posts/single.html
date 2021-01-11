@@ -8,56 +8,79 @@
   </head>
   <body>
     <style>
-    .post .title {
-      font-size: 2.5rem;
-      margin: 2.5rem 0 .5rem 0;
-    }
-    .post .subtitle {
-      font-size: 2rem;
-      margin: 1rem 0 1rem 0;
-      color: darkgray;
-    }
-    .post header {
-      margin-bottom: 2rem;
-    }
-    .post .date {
-      margin-left: 10px;
-      font-size: .85rem;
-      color: gray;
-    }
-    .post .author {
-      color: black;
-    }
-    
-    .post .cover {
-      text-align: center;
-      max-width: 100%;
-    }
+.postHeader {
+  margin: 2rem 0;
+}
+.postTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 2rem;
+  letter-spacing: 0.15rem;
+  color: var(--color-base-light);
+}
+
+.postSubtitle {
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.75rem;
+  letter-spacing: 0.15rem;
+  color: var(--color-base-light);
+}
+
+.postAuthorDate {
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.postTags {
+  text-align: right;
+  margin: 1rem 0;
+}
+
+.postTags > a {
+  background: var(--color-accent);
+  color: var(--color-base-darker);
+  padding: 0.25rem 15pt;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.postCover {
+  text-align: center;
+  max-width: 100%;
+}
+
+.postExample {
+  padding: 1rem 15px;
+  background-color: var(--color-base-light);
+  color: var(--color-base-darker);
+}
     </style>
     {{ partial "header" . }}
-    <article class="post">
-      <header>
-        <div class="title">{{ .Title }}</div>
-        {{ if .Params.Subtitle }}
-          <div class="subtitle">{{ .Params.Subtitle }}</div>
+    <div class="postHeader">
+      <!-- class="author" href="https://twitter.com/{{ .Params.Twitter }}"-->
+
+      <div class="postTags">
+        {{ range (.GetTerms "tags") }}
+          <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
         {{ end }}
-        <div class="info">
-          <a class="author" href="https://twitter.com/{{ .Params.Twitter }}">@{{ .Params.Twitter }}</a><span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
-          <div>
-              {{ range (.GetTerms "tags") }}
-                  <a href="{{ .Permalink }}">{{ .LinkTitle }}</a> 
-             {{ end }}
-          </div>
-        </div>
-      </header>
-      <main>
-        {{ with .Page.Resources.GetMatch "cover" }}
-        <img class="cover" src="{{.RelPermalink}}" />
-        {{ end }}
-        {{ .Content }}
-        {{ partial "postExample" . }}
-      </main>
-    </article>
+      </div>
+
+      <div class="postTitle">{{ .Title }}</div>
+
+      <div class="postSubtitle">{{ .Params.Subtitle }}</div>
+
+      <div class="postAuthorDate">
+        <span>@{{ .Params.Twitter }}</a> <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+      </div>
+    </div>
+
+      {{ with .Page.Resources.GetMatch "cover" }}
+      <img class="postCover" src="{{.RelPermalink}}" />
+      {{ end }}
+      {{ .Content }}
+      {{ partial "postExample" . }}
+    </div>
     {{ partial "footer" . }}
   </body>
 </html>

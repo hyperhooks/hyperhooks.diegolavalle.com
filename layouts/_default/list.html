@@ -5,67 +5,100 @@
       <meta name="viewport" content="width=device-width initial-scale=1">
       <meta name="description" content="{{ .Summary }}">
       <link rel="stylesheet" type="text/css" href="{{ relURL `css/root.css` }}" />
-      <title>{{ .Title }} - {{ .Site.Title }}</title>
+      <title>{{ .Site.Title }}</title>
+      <style>
+.masthead {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.masthead > img {
+  width: 180px;
+  height: 180px;
+  margin-left: auto;
+}
+
+.masthead > div {
+  margin-right: 10pt;
+}
+
+.siteTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 3rem;
+  letter-spacing: 0.15rem;
+}
+
+.siteSubtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  letter-spacing: 0.05rem;
+}
+
+.intro {
+  background: var(--color-accent);
+  color: var(--color-base-darker);
+  padding: 1rem 20px;
+}
+
+.intro a {
+  color: var(--color-base-dark);
+}
+
+.appclip {
+  padding: 1rem 20px;
+  display: flex;
+  justify-content: center;
+  background: var(--color-base-dark);
+}
+
+hr {
+  margin: 2rem 0;
+  border-color: var(--color-accent);
+}
+      </style>
     </head>
+
   <body>
-    <style>
-    .mastHead {
-      margin-bottom: 3rem;
-    }
-    .mastHead .logoContainer {
-      display: flex;
-      align-items: center;
-    }
 
-    .mastHead .logo {
-      width: 80px;
-      height: 80px;
-      margin-right: 15px;
-    }
-
-    .mastHead .title {
-      font-weight: bold;
-      font-size: 1.8rem;
-    }
-
-    .mastHead .subtitle {
-      font-style: italic;
-      font-size: 1.3rem;
-    }
-
-    .mastHead .titleContainer {
-      text-align: right;
-    }
-
-    .content {
-      display: flex;
-    }
-    .mainContent {
-      flex: 2;
-      padding: 0 20px;
-    }
-    .sideContent {
-      flex: 1;
-    }
-    </style>
-    <header class="mastHead">
-      <div class="logoContainer">
-        <img class="logo" src="{{ relURL `images/logo.png` }}" />
-        <div class="titleContainer">
-          <div class="title">{{ .Site.Title }}</div>
-          <div class="subtitle">{{ .Site.Params.Subtitle }}</div>
-        </div>
-      </a>
-    </header>
-    <div class="content">
-      <main class="mainContent">
-      {{ .Content }}
-      {{ partial "featured" . }}
-      </main>
-      <aside class="sideContent">
-      {{ partial "recents" . }}
-      </aside>
+    <div class="masthead">
+      <div>
+        <div class="siteTitle">{{ .Site.Title }}</div>
+        <div class="siteSubtitle">{{ .Site.Params.Subtitle }}</div>
+      </div>
+      <img class="logo" src="{{ relURL `images/logo.png` }}"/>
     </div>
+
+    {{ partial "mainMenu" }}
+    <div class="intro">{{ .Content }}</div>
+
+    <hr />
+
+    {{ range first 1 (where site.RegularPages ".Section" "posts") }}
+      {{ partial "postSummary" . }}
+    {{ end }}
+
+    <div class="appclip">
+      <img src="{{ relURL `images/appclip.svg` }}" width="250" height="250" />
+      <span>Check out our latest interactive <em>Working Example</em> running natively, right on your device!</span>
+    </div>
+
+    <hr />
+
+    {{ range first 1 (after 1 (where site.RegularPages ".Section" "posts")) }}
+      {{ partial "postSummary" . }}
+    {{ end }}
+
+    <div class="intro">{{ .Content }}</div>
+
+    <hr />
+
+    {{ range after 2 (where site.RegularPages ".Section" "posts") }}
+      {{ partial "postSummary" . }}
+    {{ end }}
+
     {{ partial "footer" . }}
+
     </body>
 </html>

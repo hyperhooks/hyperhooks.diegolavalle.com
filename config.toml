@@ -13,7 +13,7 @@ page = ["HTML", "JSON"]
 taxonomyTerm = ["HTML", "JSON"]
 
 [params]
-  subtitle = "by Diego Lavalle"
+  subtitle = "A blog about SwiftUI and related Apple ecosystem technologies"
   appLink = "https://apps.apple.com/ca/app/u-i-working-examples-swiftui/id1500566574"
 
 [markup]

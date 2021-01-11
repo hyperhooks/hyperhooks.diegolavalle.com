@@ -3,7 +3,7 @@ title = "SwiftUI Scroll Magic"
 subtitle = "Control and react to the current position"
 date = 2019-09-28T12:00:00Z
 twitter = "diegolavalledev"
-tags = ["swiftui", "scrollview"]
+tags = ["interaction", "scrolling"]
 featured = false
 example = "/examples/scroll-magic"
 

@@ -1,5 +1,8 @@
 :root {
-  --color-background: #cccccc;
-  --color-text: #000000;
-  --color-links: rgb(200, 20, 0);
+  --color-accent: #e3ae14; /* Yellow */
+  --color-base-lighter: #f2f5fa; /* Light Blue */
+  --color-base-light: #dae1f2;
+  --color-base: #608ad8; /* Highlight Blue */
+  --color-base-dark: #19284d;
+  --color-base-darker: #161f36; /* Dark Blue */
 }

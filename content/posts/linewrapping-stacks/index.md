@@ -3,7 +3,7 @@ title = "Line-Wrapping Stacks"
 subtitle = "Splitting horizontal stacks into multiple lines"
 date = 2020-10-11T12:00:00Z
 twitter = "diegolavalledev"
-tags = ["ios", "swift", "swifui", "combine", "ui"]
+tags = ["layout", "line-wrapping"]
 featured = false
 example = "/examples/thats-a-wrap"
 

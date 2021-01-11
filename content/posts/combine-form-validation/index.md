@@ -3,7 +3,7 @@ title = "Form Validation with Combine"
 subtitle = "Back your form with event-driven logic"
 date = 2019-09-14T12:00:00Z
 twitter = "diegolavalledev"
-tags = ["swiftui", "combine", "form", "validation"]
+tags = ["combine", "forms"]
 featured = false
 example = "/examples/fake-signup"
 

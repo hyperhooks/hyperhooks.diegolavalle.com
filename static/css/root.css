@@ -1,24 +1,32 @@
 @import url("colors.css");
 
-body {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem 2.5%;
+:root {
+  background: var(--color-base-dark);
+
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 2rem;
-  color: var(--color-text);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.1rem;
+}
+
+body {
+  max-width: 800pt;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  padding: 1rem 16pt;
+  background: var(--color-base-darker);
+
+  color: var(--color-base-lighter);
 }
 
 a {
-  color: var(--color-links);
+  font-weight: bold;
   text-decoration: none;
-}
-
-a:visited {
-  color: var(--color-links);
+  color: var(--color-base);
 }
 
 .highlight > pre {
   padding: 1.5rem 10px;
+  overflow-x: scroll;
 }
